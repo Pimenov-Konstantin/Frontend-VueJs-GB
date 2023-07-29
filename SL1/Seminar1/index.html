@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE Seminar 1</title>
+    <link rel="stylesheet" href="../Seminar1/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+
+<body>
+    <div id="app" class="demo">
+        <h1>{{ message }}</h1>
+        <p class="paragraph">{{ buybefore }} {{ counter }}</p>
+        <button @click="toCount">Купить</button>
+
+        <div>
+            <button @click="buyAllowed = !buyAllowed">Мне исполнилось 14 лет</button>
+            <p v-show="buyAllowed">Можете заказать товар</p>
+            <button @click="buyNotAllowed = !buyNotAllowed">Мне еще нет 14 лет</button>
+            <p v-show="buyNotAllowed">Доступ закрыт</p>
+        </div>
+
+        <div>
+            <button @click="showContent = !showContent">Показать еще</button>
+            <p v-if="showContent" class="tracking-in-contract">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+
+        <div>
+            <button @click="createRandom(1, 11)">Генерировать случайное число</button>
+            <p v-show="randomCreated">{{ randomNumber }}</p>
+            <p v-if="randomNumber < 5">Число меньше 5</p>
+            <p v-if="randomNumber >= 5 && randomCreated <= 9">Число от 5 до 9</p>
+            <p v-if="randomNumber === 10">Число ранов 10</p>
+        </div>
+    </div>
+
+    <script src="../Seminar1/script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="reverseText($event)">Перевернуть текст кнопки</button>
+        <ul>
+            <li @click="removeElement($event)" v-for="item in list" :key="item.id">{{ item }}</li>
+        </ul>
+        <button @click="addList">Добавить элемент в список</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="../HomeWork/script.js"></script>
+</body>
+
+</html>
