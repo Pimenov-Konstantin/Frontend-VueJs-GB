@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="product">
+            <img v-bind:src="productList.url" alt="tv">
+            <h1>{{productList.title}}</h1>
+            <p class="paragraph">{{productList.price}}</p>
+        </div>
+        <button @click.once="random">Скидка</button>
+        <div>
+            <ul v-for="user in users" :key="user.id">
+                <li>{{user.name}} - {{user.age}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="task2.js"></script>
+</body>
+
+</html>
