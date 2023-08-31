@@ -1,0 +1,361 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'DM Serif Display', serif;
+	font-family: 'Jost', sans-serif;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.center {
+	padding-left: calc(50% - 1200px / 2);
+	padding-right: calc(50% - 1200px / 2);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 57px;
+	margin-top: 44px;
+
+	&__logo {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		color: #292F36;
+		font-family: DM Serif Display;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 125%;
+		/* 50px */
+	}
+
+	&__menu {
+		display: flex;
+		align-items: center;
+		gap: 43px;
+		color: #292F36;
+		text-align: center;
+		font-family: Jost;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 125%;
+		/* 25px */
+	}
+}
+
+.banner {
+	display: flex;
+	justify-content: center;
+}
+
+.content {
+	padding-top: 200px;
+	display: flex;
+	gap: 52px;
+
+	&__articles {
+		width: 799px;
+
+		&_title {
+			margin-bottom: 21px;
+			color: #292f36;
+			font-family: DM Serif Display;
+			font-size: 50px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 125%; /* 62.5px */
+			letter-spacing: 1px;
+		}
+
+		&_image {
+			width: 100%;
+			height: 539px;
+			border-radius: 50px;
+		}
+
+		&_image2 {
+			height: 365px;
+		}
+
+		&_posting-date {
+			margin-top: 46px;
+			margin-bottom: 48px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&_main-info {
+			margin-bottom: 35px;
+			color: #4d5053;
+			font-family: Jost;
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 150%; /* 33px */
+			letter-spacing: 0.22px;
+		}
+
+		&_quote-box {
+			margin-bottom: 27px;
+			padding: 53px 221px;
+			border-radius: 50px;
+			background: #f4f0ec;
+			color: #cda274;
+			text-align: center;
+			font-family: DM Serif Display;
+			font-size: 25px;
+			font-style: italic;
+			font-weight: 400;
+			line-height: 125%; /* 31.25px */
+			letter-spacing: 0.5px;
+		}
+
+		&_subtitle {
+			margin-bottom: 20px;
+			color: #292f36;
+			font-family: DM Serif Display;
+			font-size: 50px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 125%; /* 62.5px */
+			letter-spacing: 1px;
+		}
+
+		&_text {
+			margin-bottom: 24px;
+		}
+
+		&_advantages {
+			display: flex;
+			flex-direction: column;
+			gap: 32px;
+			// list-style-type: none; /* Убираем исходные маркеры */
+			// counter-reset: my-counter; /* Задаём имя счетчика */
+			// list-style-position: outside;
+			list-style-position: inside;
+			margin-bottom: 44px;
+		}
+
+		&_advantage::marker {
+			color: #cda274;
+			font-family: DM Serif Display;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 125%; /* 25px */
+			letter-spacing: 0.4px;
+			list-style-position: inside;
+		}
+
+		&_advantage {
+			margin-right: 66px;
+		}
+
+		// &_advantage::before {
+		// 	content: counter(my-counter); /* Выводим число */
+		// 	counter-increment: my-counter; /* Увеличиваем значение счётчика */
+		// 	margin-right: 11px;
+		// 	color: #cda274;
+		// 	font-family: DM Serif Display;
+		// 	font-size: 20px;
+		// 	font-style: normal;
+		// 	font-weight: 400;
+		// 	line-height: 125%; /* 25px */
+		// 	letter-spacing: 0.4px;
+		// }
+
+		&_info {
+			margin-top: 35px;
+			margin-bottom: 96px;
+		}
+
+		&_text,
+		&_advantages,
+		&_info {
+			color: #4d5053;
+			font-family: Jost;
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 150%; /* 33px */
+			letter-spacing: 0.22px;
+		}
+	}
+
+	&__posting-date {
+		color: #4d5053;
+		font-family: Jost;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 150%; /* 24px */
+		letter-spacing: 0.16px;
+		text-transform: capitalize;
+	}
+
+	&__tags {
+		width: 345px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		&_heading {
+			color: #292f36;
+			font-family: DM Serif Display;
+			font-size: 25px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 125%; /* 31.25px */
+			letter-spacing: 0.5px;
+		}
+
+		&_buttons {
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: 11px;
+			column-gap: 10px;
+		}
+
+		&_button {
+			padding: 9px 30px;
+			color: #292f36;
+			text-align: center;
+			font-family: Jost;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 125%; /* 22.5px */
+			letter-spacing: 0.36px;
+			border-radius: 10px;
+			background: #f4f0ec;
+			border: none;
+		}
+
+		&_button:hover {
+			cursor: pointer;
+		}
+
+		&_button-active {
+			color: #fff;
+			background: #292f36;
+		}
+	}
+}
+
+.footer {
+	display: flex;
+	gap: 101px;
+	padding-bottom: 134px;
+
+	&__description {
+		width: 393px;
+	}
+
+	&__description_head {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__description_title {
+		color: #292f36;
+		font-family: DM Serif Display;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 125%;
+		/* 50px */
+	}
+
+	&__description_text {
+		color: #4d5053;
+		font-family: Jost;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 150%;
+		/* 33px */
+		letter-spacing: 0.22px;
+		padding-top: 18px;
+		padding-bottom: 31px;
+	}
+
+	&__description_social-logo {
+		display: flex;
+		align-items: center;
+		gap: 54px;
+	}
+
+	&__pages {
+		width: 125px;
+	}
+
+	&__pages_title {
+		color: #292f36;
+		font-family: DM Serif Display;
+		font-size: 25px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 125%;
+		/* 31.25px */
+		margin-bottom: 9px;
+	}
+
+	&__pages_link {
+		display: flex;
+		flex-direction: column;
+		color: #4d5053;
+		font-family: Jost;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 300%;
+		/* 66px */
+		letter-spacing: 0.22px;
+	}
+
+	&__bugs {
+		width: 120px;
+	}
+
+	&__contacts {
+		width: 258px;
+	}
+
+	&__contacts_title {
+		color: #292f36;
+		font-family: DM Serif Display;
+		font-size: 25px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 125%;
+		/* 31.25px */
+		margin-bottom: 26px;
+	}
+
+	&__contacts_links {
+		display: flex;
+		flex-direction: column;
+		color: #4d5053;
+		font-family: Jost;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 300%;
+		/* 33px */
+		letter-spacing: 0.22px;
+	}
+
+	&__contacts_address {
+		line-height: 150%;
+	}
+}
